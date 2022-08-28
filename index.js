@@ -41,13 +41,6 @@ function seleccionar(casilla){
     pintarPuzzle(); 
 
        desmarcarTodo();
-
-   /* var correcto = comprobarPuzzle();
-    if( correcto == true ){
-       setInterval(() => {
-       alert("perfecto, ahora contáctame....");
-       }, 300); 
-      } */
     }
 }
     
