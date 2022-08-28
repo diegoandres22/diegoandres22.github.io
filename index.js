@@ -42,12 +42,12 @@ function seleccionar(casilla){
 
        desmarcarTodo();
 
-    var correcto = comprobarPuzzle();
+   /* var correcto = comprobarPuzzle();
     if( correcto == true ){
        setInterval(() => {
-        alert("perfecto, ahora contáctame....");
+       alert("perfecto, ahora contáctame....");
        }, 300); 
-       }
+      } */
     }
 }
     
