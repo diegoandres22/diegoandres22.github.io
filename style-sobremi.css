@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2? family= Nunito:wght@500;600;800 & display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    
+}
+
+::-webkit-scrollbar{
+    background-color: rgb(60, 60, 60);
+    width: 10px;
+    
+}
+::-webkit-scrollbar-thumb{
+    background-color: #0f363d;
+    border-radius: 15px;
+    border: 2px solid rgb(60, 60, 60);
+}
+
+
+*::selection {
+
+    background-color: rgba(0, 0, 0, .6);
+    color: #ff00c8;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#inicio {
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url("imagen/fondo-sobremi.png");
+    background-size: cover;
+    background-position: bottom;
+
+}
+
+#inicio .contenido header {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+
+}
+
+#inicio .contenido header .contenido-header {
+
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+#inicio .contenido header .contenido-header a {
+    text-decoration: none;
+    text-align: center;
+    color: deeppink;
+
+}
+
+.nav {
+    width: 50%;
+  
+}
+
+#inicio .contenido header .contenido-header nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+#inicio .contenido header .contenido-header nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin: 0 12px;
+    font-weight: 400;
+    transition: .5s;
+}
+
+#inicio .contenido header .contenido-header nav ul li a:hover {
+    color: deeppink;
+}
+
+.presentacion {
+    max-width: 1100px;
+    height: 100vh;
+    margin: auto;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.presentacion::backdrop #inicio .contenido .presentacion .bienvenida {
+    font-size: 16px;
+    margin: 20px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+
+}
+
+#inicio .contenido .presentacion h2 {
+    font-size: 45px;
+    margin-bottom: 25px;
+    text-align: center;
+
+}
+
+#icono-nav {
+    color: deeppink;
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* seccion sobremi */
+#sobremi {
+    background-image: linear-gradient(to bottom, #0f2731, #10313d, #103c4a, #0d4756, #095362, #00546a, #005572, #00557a, #00487e, #00397f, #00287b, #000f72);
+    padding: 100px 15px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    border-color: solid brown 2px;
+    position: relative;
+
+}
+
+#sobremi .contenedor-foto {
+
+    width: 1500px;
+    margin-right: 80px;
+
+}
+
+#sobremi .contenedor-foto img {
+    padding: 20px;
+    width: 100%;
+    border-radius: 20px;
+
+}
+
+#sobremi .sobremi {
+    margin: 0 40px;
+
+}
+
+#sobremi .sobremi .titulo-seccion {
+    font-size: 22px;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+
+}
+
+#sobremi .sobremi h2 {
+
+    font-size: 34px;
+    font-weight: bold;
+    margin: 20px 0;
+    letter-spacing: 2px;
+
+}
+
+#sobremi .sobremi p {
+    font-size: 14px;
+    line-height: 25px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 12px;
+
+}
+
+#sobremi .sobremi p a {
+    text-decoration: none;
+
+    color: aquamarine;
+}
+
+@media screen and (max-width:800px) {
+
+    .nav {
+        opacity: 0;
+        background-color: rgba(0, 0, 0, .6);
+        width: 100vw;
+        height: 90px;
+        position: absolute;
+        top: 48px;
+        left: 0;
+        padding: 10px 0;
+        transition: all .5s;
+        
+    }
+
+    .responsive {
+        opacity: 1;
+
+    }
+
+    nav.responsive ul {
+        display: block !important;
+        text-align: center;
+
+    }
+
+    nav.responsive ul li {
+        margin: 5px 0;
+
+    }
+
+    #icono-nav {
+        display: block;
+    }
+    .invisible{
+        opacity: 0;
+        display: none;
+    }
+}

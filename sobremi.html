@@ -1,21 +1,71 @@
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DIEGO_VELASQUEZ</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style-sobremi.css">
+  <!-- icono menu-->
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <title>DIEGO VELASQUEZ</title>
 </head>
-<body>  
-        <header class="header">
-          <nav class="menu">
-            <a href="index"><h1>DiegoAndres</h1></a>
-              <ul>
-                <li><a href="sobremi">sobre mí</a></li>
-                <li><a href="habilidades">habilidades</a></li>
-                <li><a href="contactar">contactar</a></li></ul>
-            </nav>
-            <h1><b>mariaulis deja el chisme</b></h1>
-        </header>
+
+<body>
+  <!-- inicio -->
+  <section id="inicio">
+    <div class="contenido">
+      <header>
+        <div class="contenido-header">
+          <a href="index.html">
+            <h1>Diego Velasquez</h1>
+          </a>
+          <nav id="nav" class="nav">
+            <ul id="links">
+              <li><a class="titu invisible" href="#">Sobre mi</a></li>
+              <li><a class="titu invisible" href="habilidades">Habilidades</a></li>
+              <li><a class="titu invisible" href="contactar">Contactar</a></li>
+            </ul>
+          </nav>
+          <!-- icono menu -->
+          <div id="icono-nav">
+            <i class='bx bx-menu' onclick="responsiveMenu()"></i>
+          </div>
+        </div>
+      </header>
+      <div class="presentacion">
+        <p class="bienvenida"> Hola</p>
+        <h2>Acá podrás ver mi trayecto de formación <br> como profesional</h2>
+      
+      </div>
+    </div>
+  </section>
+
+  <!-- sobre mi -->
+  <section id="sobremi">
+    <div class="contenedor-foto">
+      <img src="imagen/sobremi.png" alt="">
+    </div>
+
+    <div class="sobremi">
+      <p class="titulo-seccion">
+        ¿quien soy?
+      </p>
+      <h4>
+       soy desarrollador web full stack
+      </h4>
+      <p>
+        Desde pequeño, quería ser como como <a href="https://es.wikipedia.org/wiki/Tom_Cruise" target="_blank">Tom Cruise</a>, siempre con las ganas de saber de todo un poco, deambulando entre distintas profesiones. <br>
+Hoy en día soy desarrollador web full stack.
+Nací en Venezuela, El 30 De mayo Del 2000. Mi Infancia Estuvo Llena De diferentes oficios y profesiones, lo que me dificultó  reconocer en cuál enfocarme. Fui desde <a href="https://es.wikipedia.org/wiki/Disc-jockey" target="_blank">Disk Jockey (DJ)</a> en una agencia de festejos hasta técnico en reparación de equipos móviles, entre otras actividades con fines de lucro. De esta forma descubrí que nada de lo que había hecho, había despertado mi vocación; no había explotado mi potencial hasta entonces. 
+En el año 2020, estando en Argentina, me adentré en el mundo informático, conocí diferentes lenguajes de programación y orienté mis estudios a esa área. Me enfoqué en armar un stack tecnológico y estudiarlo.
+Actualmente, una vez culminadas las capacitaciones que me proporcionó la <a href="https://es.wikipedia.org/wiki/CESSI" target="_blank">Cámara de la Industria Argentina del Software</a>, y enfocando mi meta como desarrollador web full stack, puedo decir que mi objetivo es, ahora, explotar mi creatividad, ejercitar mi cerebro al máximo para lograr la resolución de problemas día a día y hacer de la programación parte de mi vida.
+      </p>
+
+    </div>
+
+  </section>
+    <!-- java scrip -->
+    <script src="sobremi.js"></script>
 </body>
+
 </html>
