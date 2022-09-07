@@ -41,6 +41,7 @@ function seleccionar(casilla){
     pintarPuzzle(); 
 
        desmarcarTodo();
+
     }
 }
     
