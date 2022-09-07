@@ -271,27 +271,26 @@ td img {
   height: 129px;
 }
 @media screen and (max-width:900px) {
-             /* nav */
-  header{
-  
    
+  /* nav */
+  header {
     width: 100%;
-  
   }
   header nav {
-   gap: 19px;
-   width: 100%;
+    gap: 1px;
+    width: 100%;
   }
   header nav ul {
-  flex-direction: row;
- justify-content: space-evenly;
- padding-left: 0;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-left: 0;
+  /* imagen  */
+  .contenedor-foto {
+    display: none;
   }
- 
-           /* imagen  */
-    .contenedor-foto {
-      display: none;
-    }
-   
+    /* puzzle */
+  .contenedor_puzzle {
+    top: 8%;
+  }
 }
 
