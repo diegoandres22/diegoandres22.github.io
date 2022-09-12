@@ -1,25 +1,119 @@
 @import url('https://fonts.googleapis.com/css2? family= Nunito:wght@500;600;800 & display=swap');
 
+:root {
+    --colorLetraBlanca: rgb(255, 255, 255);
+    --colorLinks: aquamarine;
+
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
-    
+    overflow-x: hidden;
 }
 
-::-webkit-scrollbar{
+/* pantalla de carga */
+.conteneLoadin {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    display: flex;
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+    background: #02171d;
+    transition: all .9s;
+    display: none;
+} 
+/* .hiden{
+    overflow: hidden;
+} */
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+
+}
+
+.lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgb(6, 165, 157);
+    border:3px solid #003b3d;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes lds-ellipsis3 {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes lds-ellipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(24px, 0);
+    }
+}
+/* scroll */
+::-webkit-scrollbar {
     background-color: rgb(60, 60, 60);
     width: 10px;
-    
+
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
     background-color: #0f363d;
     border-radius: 15px;
     border: 2px solid rgb(60, 60, 60);
 }
 
-
+/* opción copiar */
 *::selection {
 
     background-color: rgba(0, 0, 0, .6);
@@ -66,7 +160,7 @@ html {
 
 .nav {
     width: 50%;
-  
+
 }
 
 #inicio .contenido header .contenido-header nav ul {
@@ -80,7 +174,7 @@ html {
 
 #inicio .contenido header .contenido-header nav ul li a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: var(--colorLetraBlanca);
     margin: 0 12px;
     font-weight: 400;
     transition: .5s;
@@ -94,7 +188,7 @@ html {
     max-width: 1100px;
     height: 100vh;
     margin: auto;
-    color: #ffffff;
+    color: var(--colorLetraBlanca);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -123,66 +217,127 @@ html {
     font-size: 30px;
     cursor: pointer;
 }
+.contienetodo{
+    height: 55px;
+    width: auto;
+    overflow: hidden;
+}
+.contienemeno{
+    animation: mueverico 4s linear infinite;
+ }
+@keyframes mueverico {
+    0% {
+            transform: translateY(0);
+    }
+    
+    5%{
+        transform: translateY(0);
+    }
+    25%{
+        transform: translateY(-75px);
+    }
+    30%{
+        transform: translateY(-75px);
+    }
+    50%{
+        transform: translateY(-150px);
+    }
+    55%{
+        transform: translateY(-150px);
+    }
+    75%{
+        transform: translateY(-230px);
+    }
+    80%{
+        transform: translateY(-230px);
+    }
+    100%{
+        transform: translateY(-0px);
+    }
+}
+
+
+
 
 /* seccion sobremi */
 #sobremi {
-    background-image: linear-gradient(to bottom, #0f2731, #10313d, #103c4a, #0d4756, #095362, #00546a, #005572, #00557a, #00487e, #00397f, #00287b, #000f72);
-    padding: 100px 15px;
-    color: rgb(255, 255, 255);
-    display: flex;
-    border-color: solid brown 2px;
+    background-image: linear-gradient(to bottom, #0f2731, #10313d, #103c4a, #0d4756, #095362, #00546a);
+
     position: relative;
+    color: var(--colorLetraBlanca);
+    display: flex;
 
 }
 
-#sobremi .contenedor-foto {
+.conten {
 
-    width: 1500px;
-    margin-right: 80px;
+    width: 100vw;
+    height: auto;
+    margin: 20px auto;
+    padding: 25px;
+    display: flex;
+}
+
+.contenedor-sobremi .img1 {
+    position: relative;
+    margin: 5% 2% auto 3%;
+    float: left;
+    width: 15vw;
+    height: auto;
+
 
 }
 
-#sobremi .contenedor-foto img {
-    padding: 20px;
-    width: 100%;
-    border-radius: 20px;
+.contenedor-sobremi .titulo-seccion {
 
-}
-
-#sobremi .sobremi {
-    margin: 0 40px;
-
-}
-
-#sobremi .sobremi .titulo-seccion {
+    display: inline-block;
+    margin: 2% 2% 2% 0;
+    line-height: 2;
     font-size: 22px;
     text-transform: uppercase;
-    color: rgb(255, 255, 255);
-
+    color: var(--colorLetraBlanca);
 }
 
-#sobremi .sobremi h2 {
-
-    font-size: 34px;
-    font-weight: bold;
-    margin: 20px 0;
-    letter-spacing: 2px;
-
-}
-
-#sobremi .sobremi p {
-    font-size: 14px;
+.contenedor-sobremi p {
+    display: block;
+    font-size: 1em;
     line-height: 25px;
-    color: rgb(255, 255, 255);
-    margin-bottom: 12px;
-
+    color: var(--colorLetraBlanca);
+    z-index: 1000;
 }
 
-#sobremi .sobremi p a {
+.contenedor-sobremi p a,
+.aei {
     text-decoration: none;
-
-    color: aquamarine;
+    color: var(--colorLinks);
 }
+
+.contenedor-sobremi .img2 {
+    position: relative;
+    margin: 0 0 0 3%;
+    float: right;
+    width: 20vw;
+    height: auto;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width:800px) {
 
@@ -196,7 +351,7 @@ html {
         left: 0;
         padding: 10px 0;
         transition: all .5s;
-        
+
     }
 
     .responsive {
@@ -218,8 +373,13 @@ html {
     #icono-nav {
         display: block;
     }
-    .invisible{
+
+    .invisible {
         opacity: 0;
         display: none;
+    }
+
+    .contenedor-sobremi .img2 {
+        display: block;
     }
 }

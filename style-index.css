@@ -217,7 +217,7 @@ img {
   z-index: 1;
   left: -60px;
   top: -37px;
-
+  
 }
 
 .contenedorVideoH {
@@ -230,6 +230,7 @@ img {
   opacity: 0;
   transition: all .4s;
   display: none;
+  
 }
 
 .boton:hover .contenedorVideoC {
@@ -330,11 +331,24 @@ td img {
   .puzzle {
     overflow: hidden;
   }
+  /* botones */
 
+  
+  .contenedorVideoS {
+    overflow: hidden;
+  }
+  
+  .contenedorVideoH {
+    overflow: hidden;
+  }
+  .contenedorVideoC {
+    overflow: hidden;
+  }
   /*pepas  */
   .pepas span {
 
     height: 1%;
     width: 1%;
   }
+
 }
