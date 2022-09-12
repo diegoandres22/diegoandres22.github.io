@@ -27,11 +27,9 @@
     align-items: center;
     background: #02171d;
     transition: all .9s;
-    display: none;
+    
 } 
-/* .hiden{
-    overflow: hidden;
-} */
+
 .lds-ellipsis {
     display: inline-block;
     position: relative;
@@ -223,7 +221,7 @@ html {
     overflow: hidden;
 }
 .contienemeno{
-    animation: mueverico 4s linear infinite;
+    animation: mueverico 6s linear infinite;
  }
 @keyframes mueverico {
     0% {
