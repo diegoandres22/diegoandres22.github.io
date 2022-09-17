@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2? family= Nunito:wght@500;600;800 & display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;800&display=swap');
 :root {
     --colorLetraBlanca: rgb(255, 255, 255);
     --colorLinks: aquamarine;
@@ -11,8 +10,17 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
+   
+    
+}
+
+body{
     overflow-x: hidden;
 }
+html {
+    scroll-behavior: smooth;
+}
+
 
 /* pantalla de carga */
 .conteneLoadin {
@@ -25,7 +33,7 @@
     z-index: 200;
     justify-content: center;
     align-items: center;
-    background: #02171d;
+    background: #013746;
     transition: all .9s;
     
 } 
@@ -44,8 +52,8 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: rgb(6, 165, 157);
-    border:3px solid #003b3d;
+    background: rgb(0, 158, 206);
+    border: 3px solid #081616;
     animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
 
@@ -119,9 +127,6 @@
 
 }
 
-html {
-    scroll-behavior: smooth;
-}
 
 #inicio {
     background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url("imagen/fondo-sobremi.png");
@@ -131,10 +136,10 @@ html {
 }
 
 #inicio .contenido header {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     position: fixed;
     width: 100%;
-    z-index: 100;
+    z-index: 199;
     top: 0;
 
 }
@@ -156,9 +161,10 @@ html {
 
 }
 
-.nav {
+nav {
     width: 50%;
-
+    
+   
 }
 
 #inicio .contenido header .contenido-header nav ul {
@@ -172,14 +178,14 @@ html {
 
 #inicio .contenido header .contenido-header nav ul li a {
     text-decoration: none;
-    color: var(--colorLetraBlanca);
+    color: deeppink;
     margin: 0 12px;
     font-weight: 400;
     transition: .5s;
 }
 
 #inicio .contenido header .contenido-header nav ul li a:hover {
-    color: deeppink;
+    color: var(--colorLetraBlanca);
 }
 
 .presentacion {
@@ -191,20 +197,21 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    
+    
 }
 
-.presentacion::backdrop #inicio .contenido .presentacion .bienvenida {
+.bienvenida {
     font-size: 16px;
     margin: 20px;
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: 10px;
 
 }
 
-#inicio .contenido .presentacion h2 {
+.texto h2 {
     font-size: 45px;
-    margin-bottom: 25px;
+   margin: 0 10%;
     text-align: center;
 
 }
@@ -214,14 +221,18 @@ html {
     display: none;
     font-size: 30px;
     cursor: pointer;
+    
 }
 .contienetodo{
+     
     height: 55px;
     width: auto;
     overflow: hidden;
+    
 }
 .contienemeno{
-    animation: mueverico 6s linear infinite;
+    animation: mueverico 5s linear infinite;
+    
  }
 @keyframes mueverico {
     0% {
@@ -232,22 +243,22 @@ html {
         transform: translateY(0);
     }
     25%{
-        transform: translateY(-75px);
+        transform: translateY(-70px);
     }
     30%{
-        transform: translateY(-75px);
+        transform: translateY(-70px);
     }
     50%{
-        transform: translateY(-150px);
+        transform: translateY(-130px);
     }
     55%{
-        transform: translateY(-150px);
+        transform: translateY(-130px);
     }
     75%{
-        transform: translateY(-230px);
+        transform: translateY(-190px);
     }
     80%{
-        transform: translateY(-230px);
+        transform: translateY(-190px);
     }
     100%{
         transform: translateY(-0px);
@@ -271,18 +282,19 @@ html {
 
     width: 100vw;
     height: auto;
-    margin: 20px auto;
+    margin: 20px auto ;
     padding: 25px;
     display: flex;
+     
 }
 
 .contenedor-sobremi .img1 {
     position: relative;
-    margin: 5% 2% auto 3%;
+    margin: 5% 2% 0 3%;
     float: left;
     width: 15vw;
     height: auto;
-
+  
 
 }
 
@@ -291,23 +303,36 @@ html {
     display: inline-block;
     margin: 2% 2% 2% 0;
     line-height: 2;
-    font-size: 22px;
+    font-weight: 800;
+    font-size: 1.8em;
     text-transform: uppercase;
     color: var(--colorLetraBlanca);
+    
+}
+.contenedor-sobremi h4{
+    font-weight: 600;
+    font-size: 1.2em;
 }
 
-.contenedor-sobremi p {
-    display: block;
-    font-size: 1em;
+.contenedor-sobremi b, .dicho, .aei {
+    
+     font-size: 1em;
+     font-weight: 400;
     line-height: 25px;
-    color: var(--colorLetraBlanca);
-    z-index: 1000;
+    color: var(--colorLetraBlanca); 
+    
+   
 }
 
-.contenedor-sobremi p a,
+.contenedor-sobremi b a,
 .aei {
+    position: relative;
     text-decoration: none;
-    color: var(--colorLinks);
+    color: var(--colorLinks); 
+    
+}
+.aei{
+    margin-left: 1em;
 }
 
 .contenedor-sobremi .img2 {
@@ -317,49 +342,40 @@ html {
     width: 20vw;
     height: auto;
     display: none;
+    
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* responsive desing */
 @media screen and (max-width:800px) {
 
-    .nav {
+    .nav ul{
         opacity: 0;
+    }
+
+    nav {
+        transition: all .5s;
+        display: block;
         background-color: rgba(0, 0, 0, .6);
-        width: 100vw;
-        height: 90px;
+        width: 100%;
+        height: 100px;
         position: absolute;
-        top: 48px;
+        top: 52px;
         left: 0;
         padding: 10px 0;
-        transition: all .5s;
-
+        opacity: 0;
     }
-
     .responsive {
         opacity: 1;
-
+        
     }
 
-    nav.responsive ul {
+
+    .responsive ul {
         display: block !important;
         text-align: center;
+        opacity: 1;
+        
 
     }
 
@@ -371,13 +387,14 @@ html {
     #icono-nav {
         display: block;
     }
-
-    .invisible {
-        opacity: 0;
-        display: none;
+    
+    .contenedor-sobremi .img1 {
+        
+        width: 25%;
     }
 
     .contenedor-sobremi .img2 {
         display: block;
+        width: 25%;
     }
 }
