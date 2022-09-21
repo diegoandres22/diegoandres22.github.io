@@ -35,7 +35,7 @@ html {
     align-items: center;
     background: #013746;
     transition: all .9s;
-    
+   
 } 
 
 .lds-ellipsis {
@@ -294,7 +294,9 @@ nav {
     float: left;
     width: 15vw;
     height: auto;
-  
+    border-bottom: 8px solid rgb(49, 49, 49);
+    border-radius: 25%;
+   
 
 }
 

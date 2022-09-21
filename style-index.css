@@ -271,17 +271,18 @@ img {
 
 .puzzle {
   margin: auto;
-
-  width: 400px;
-  height: 400px;
+  width: 480px;
+  height: 480px;
   border: 2px solid var(--azulFlama);
+  /* transform: scale(0); */
 }
 
 td img {
-  width: 129px;
-  height: 129px;
+  width: 166px;
+  height: 166px;
 
 }
+
 
 @media screen and (max-width:900px) {
 
