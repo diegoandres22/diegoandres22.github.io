@@ -6,24 +6,27 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Dangrek', cursive;
-    
+
 }
 
-body{
+body {
     overflow: hidden;
+
 }
-        /* nav con fondo */
+
+/* nav con fondo */
 .container-nav {
     position: relative;
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(19, 18, 18, 0.747),rgba(11, 26, 66, 0.24)), url(imagen/fondo-habilidades2.jpg);
+    background-image: linear-gradient(rgba(19, 18, 18, 0.747), rgba(11, 26, 66, 0.24)), url(imagen/fondo-habilidades2.jpg);
     background-size: cover;
-     background-position: center;
-     background-repeat: no-repeat;
-    
+    background-position: center;
+    background-repeat: no-repeat;
+
 }
-.navbar{
+
+.navbar {
     position: relative;
     z-index: 100;
     width: 80%;
@@ -32,35 +35,41 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-   
-    
+
+
 }
-.navbar ul li{
+
+.navbar ul li {
     list-style: none;
     display: inline-block;
     margin: 0 30px;
-    
-    
+
+
 }
-.navbar ul li :hover{
-color: rgb(0, 68, 255);
-text-shadow: 2px 2px 29px #000080,2px 2px 29px #0051ff;
-font-size: 1.5em;
+
+.navbar ul li :hover {
+    color: rgb(0, 68, 255);
+    text-shadow: 2px 2px 29px #000080, 2px 2px 29px #0051ff;
+    font-size: 1.5em;
 }
-.navbar a{
+
+.navbar a {
     text-decoration: none;
-    color: #0000FF; 
+    color: #0000FF;
     font-size: 1.3em;
-    
+
     transition: all .3s;
 }
-.navbar a h1{
+
+.navbar a h1 {
     font-size: 1.8em;
     letter-spacing: 3px;
 }
 
 /* imagen con hechizos */
-.contenedor-imagen ,.contenedor-hechizos {
+
+.contenedor-imagen,
+.contenedor-hechizos {
     position: absolute;
     top: 0;
     left: 0;
@@ -68,63 +77,176 @@ font-size: 1.5em;
     height: 100%;
     display: flex;
 }
-.imagen{
+
+.imagen {
     position: relative;
     width: 80vw;
-    height:100vh;
-    margin:auto auto 0 auto;
-  
-}
-.man{
-    width:100% ;
-    height:100% ;
-    
+    height: 100vh;
+    margin: auto auto 0 auto;
+
 }
 
+.man {
+    width: 100%;
+    height: 100%;
+
+}
 
 
-.hechizos{
+
+.hechizos {
     position: relative;
     width: 85vw;
-    height:100vh;
-    margin:auto auto 0 auto;
+    height: 100vh;
+    margin: auto auto 0 auto;
     display: flex;
-    
+
 }
-.hechizos img{
+
+.hechizos img {
     width: 400px;
     height: 400px;
-    margin:auto auto 65px auto;
+    margin: auto auto 65px auto;
     opacity: .9;
-    
+
 }
+
 .hechizo1 {
     animation: turn1 100s linear infinite;
 }
-.hechizo2{
+
+.hechizo2 {
     animation: turn2 100s linear infinite;
 }
-@keyframes turn1{
-    to{
+
+@keyframes turn1 {
+    to {
         transform: rotate(1turn);
     }
 }
-@keyframes turn2{
-    to{
+
+@keyframes turn2 {
+    to {
         transform: rotate(-1turn);
     }
 }
 
+
+
+
+
+
+
+
+
+
+
 /* responsive desing */
 @media screen and (max-width:950px) {
 
-    body{
-        overflow:scroll;
+    body {
+        overflow:auto;
+        overflow-x: hidden;
+        
     }
-    .contenedor-imagen ,.contenedor-hechizos {
+    .container-nav {
        
+        height: auto;
+    }
+    
+    .container-nav {
+       
+        width: 100%;
+        height: 1180px;
+         
+    }
+   
+    .contenedor-imagen,
+    .contenedor-hechizos {
+
         display: none;
     }
 
+    .navbar {
 
+        width: 100%;
+        display: inline-block;
+
+    }
+
+    .navbar ul {
+        display: flex;
+        text-align: center;
+    }
+
+    .navbar ul li {
+        margin: 5px auto;
+    }
+
+    .navbar a h1 {
+        display: flex;
+
+        justify-content: center;
+    }
+
+    /* hechizos que giran */
+
+    .contenedor-grafic{
+        position: absolute;
+        top: 25%;
+        left: 5%;
+        width: 100vw;
+        height: 100vh;
+    }
+    .grafic {
+        position: relative;
+        display: grid;
+        padding-top: 3rem;
+        grid-template-columns: 1fr 75%;
+       
+    }
+
+    .grafic-man {
+        width: 100%;
+        grid-column-start: 2;
+         
+    }
+
+    .absolute {
+        
+        position: absolute;
+       
+    }
+    .grafic-circulos {
+        
+        height: 100%;
+        aspect-ratio: 1 /1;
+        opacity: .8;
+    }
+    .grafic-circulo1 {
+        mix-blend-mode: screen;
+        width: 65%;
+        height: 65%;
+        top: 36%;
+        animation: turn1 100s linear infinite;
+    }
+    .grafic-circulo2{
+        mix-blend-mode: screen;
+        width: 35%;
+        height: 35%;
+        margin: 52% auto auto 17%;
+        animation: turn2 100s linear infinite;
+    }
+    
+    @keyframes turn1 {
+        to {
+            transform: rotate(1turn);
+        }
+    }
+    
+    @keyframes turn2 {
+        to {
+            transform: rotate(-1turn);
+        }
+    }
 }

@@ -70,6 +70,6 @@ function pintarPuzzle(){
     
     var casilla_primer_click;
 
-    desordenar();
+     desordenar();
     
-    pintarPuzzle();
+     pintarPuzzle();
