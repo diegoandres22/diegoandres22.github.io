@@ -135,7 +135,7 @@
     height: 100%;
     display: flex;
     z-index: -1;
-
+    
 }
 
 .imagen {
@@ -157,25 +157,25 @@
 
 .hechizos {
     position: relative;
-    width: 85vw;
-    height: 80vh;
-    margin: auto auto auto 23%;
+    width: 70vw;
+    height: 60vh;
+    margin: auto auto auto 28%;
     display: flex;
 
 
 }
 
 .hechizo1 {
-    width: 340px;
-    height: 340px;
+    width: 450px;
+    height: 450px;
     margin: auto auto 15px auto;
     opacity: .9;
 
 }
 
 .hechizo2 {
-    width: 210px;
-    height: 210px;
+    width: 300px;
+    height: 300px;
     margin: auto auto 75px auto;
     opacity: .9;
 
@@ -207,7 +207,7 @@
 
     position: absolute;
     top: 180px;
-    left: 1%;
+    left: 5%;
     width: 50%;
     height: 70%;
     color: aliceblue;
@@ -221,7 +221,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 2em;
+    font-size: 3em;
 }
 .parrafo p{
     text-align: center;
@@ -304,17 +304,17 @@
 @keyframes pulse {
     0% {
         transform: scale(.99);
-        box-shadow: 0 0 0 0 rgba(255, 255, 255, .1);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.295);
     }
 
     70% {
         transform: scale(1);
-        box-shadow: 0 0 0 25px rgba(255, 255, 255, 0);
+        box-shadow: 0 0 0 35px rgba(255, 255, 255, 0);
     }
 
     100% {
         transform: scale(.99);
-        box-shadow: 0 0 0 0 rgba(255, 255, 255, .1);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.205);
     }
 }
 
@@ -336,14 +336,15 @@
     width: 140px;
     user-select: none;
     background-position: center bottom;
-
+   
     border-radius: 50%;
 
 }
 
 .col-10 {
     padding-top: 140px;
-    line-height: 1.7em;
+    line-height: 1.9em;
+    font-size: 1.5em;
 }
 
 /* experiencias laborales */
@@ -373,6 +374,7 @@
 .experiencias2 {
     display: flex;
     padding: 50px;
+    margin: 50px auto 50px auto;
 
 }
 
@@ -386,6 +388,7 @@
 .experienciasP2 {
     margin-left: 20px;
     margin-right: 40px;
+    font-size: 1.5em;
 }
 
 .titu-fecha,
@@ -421,7 +424,8 @@
 .estudios2,
 .estudios3 {
     display: flex;
-    padding: 50px;
+    font-size: 1.5em;
+    margin: 100px auto 100px auto;
 
 }
 
@@ -724,11 +728,46 @@
 
 
 
+/* respnsive desing */
+@media screen and (max-width: 1930px) {
 
 
+/* hard skills */
 
+.html,
+.css,
+.sprin,
+.js,
+.msql,
+.angu,
+.git,
+.boostrap {
 
+    left: 117px;
+}
+.git{
+    left: 102px;
+}
+.angu {
+    left: 102px;
+    width: 90px;
+    height: 160px;
+    border-radius: 10px;
 
+}
+
+.js{
+
+    left: 110px;
+
+}
+
+.msql {
+
+    left: 90px;
+
+}
+}
 
 
 
@@ -840,7 +879,7 @@
 
     /* hard skills */
     .skills-hard {
-        background: rgba(0, 255, 13, 0.308);
+        
         height: 210vh;
     }
 
@@ -888,7 +927,7 @@
     }
 /* hard skills */
 .skills-hard {
-    background: rgba(255, 251, 0, 0.397);
+    
     height: 220vh;
 }
 .html,
@@ -928,7 +967,7 @@
 
     /* hard skills */
     .skills-hard {
-        background: rgba(255, 0, 170, 0.377);
+       
         height: 240vh;
     }
     .html,
