@@ -1,0 +1,58 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* panel banner cambiar imagen de fondo */
+.imagenDeFondo {
+    width: 90vw;
+    height: 90vh;
+    margin: 100px auto auto auto;
+
+}
+.imagenDentro {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(imagenes/baner.jpg);
+    background-size: cover;
+    z-index: 1;
+    user-select: none;
+
+    font-size: 3em;
+    color: cadetblue;
+}
+.hoverDeLA{
+    width: 100%;
+    height: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hoverDeLA:hover{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.233);
+    color: rgb(3, 5, 5);
+}
+/* acerca de mi  */
+#ACERCA{
+    padding: 100px;
+}
+
+/* experiencias laborales */
+.contenedor-experiencias {
+   
+    padding: 50px 100px 0;
+    height: 120vh;
+    
+}
+/* estudios */
+.contenedor-estudios {
+ 
+    height: 125vh;
+   
+}
