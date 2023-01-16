@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;800&display=swap');
+:root {
+    --colorLetraBlanca: rgb(255, 255, 255);
+    --colorLinks: aquamarine;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+   
+    
+}
+
+body{
+    overflow-x: hidden;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* pantalla de carga */
+.conteneLoadin {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    display: flex;
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+    background: #013746;
+    transition: all .9s;
+   
+} 
+
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+
+}
+
+.lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgb(0, 158, 206);
+    border: 3px solid #081616;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes lds-ellipsis3 {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes lds-ellipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(24px, 0);
+    }
+}
+/* scroll */
+::-webkit-scrollbar {
+    background-color: rgb(60, 60, 60);
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #0f363d;
+    border-radius: 15px;
+    border: 2px solid rgb(60, 60, 60);
+}
+
+/* opción copiar */
+*::selection {
+
+    background-color: rgba(0, 0, 0, .6);
+    color: #ff00c8;
+
+}
+
+
+#inicio {
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url("imagen/fondo-sobremi.png");
+    background-size: cover;
+    background-position: bottom;
+
+}
+
+#inicio .contenido header {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    width: 100%;
+    z-index: 199;
+    top: 0;
+
+}
+
+#inicio .contenido header .contenido-header {
+
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+#inicio .contenido header .contenido-header a {
+    text-decoration: none;
+    text-align: center;
+    color: deeppink;
+
+}
+
+nav {
+    width: 50%;
+    
+   
+}
+
+#inicio .contenido header .contenido-header nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+#inicio .contenido header .contenido-header nav ul li a {
+    text-decoration: none;
+    color: deeppink;
+    margin: 0 12px;
+    font-weight: 400;
+    transition: .5s;
+}
+
+#inicio .contenido header .contenido-header nav ul li a:hover {
+    color: var(--colorLetraBlanca);
+}
+
+.presentacion {
+    max-width: 1100px;
+    height: 100vh;
+    margin: auto;
+    color: var(--colorLetraBlanca);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+.bienvenida {
+    font-size: 16px;
+    margin: 20px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+
+}
+
+.texto h2 {
+    font-size: 45px;
+   margin: 0 10%;
+    text-align: center;
+
+}
+
+#icono-nav {
+    color: deeppink;
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    
+}
+.contienetodo{
+     
+    height: 55px;
+    width: auto;
+    overflow: hidden;
+    
+}
+.contienemeno{
+    animation: mueverico 5s linear infinite;
+    
+ }
+@keyframes mueverico {
+    0% {
+            transform: translateY(0);
+    }
+    
+    5%{
+        transform: translateY(0);
+    }
+    25%{
+        transform: translateY(-70px);
+    }
+    30%{
+        transform: translateY(-70px);
+    }
+    50%{
+        transform: translateY(-130px);
+    }
+    55%{
+        transform: translateY(-130px);
+    }
+    75%{
+        transform: translateY(-190px);
+    }
+    80%{
+        transform: translateY(-190px);
+    }
+    100%{
+        transform: translateY(-0px);
+    }
+}
+
+
+
+
+/* seccion sobremi */
+#sobremi {
+    background-image: linear-gradient(to bottom, #0f2731, #10313d, #103c4a, #0d4756, #095362, #00546a);
+
+    position: relative;
+    color: var(--colorLetraBlanca);
+    display: flex;
+
+}
+
+.conten {
+
+    width: 100vw;
+    height: auto;
+    margin: 20px auto ;
+    padding: 25px;
+    display: flex;
+     
+}
+
+.contenedor-sobremi .img1 {
+    position: relative;
+    margin: 5% 2% 0 3%;
+    float: left;
+    width: 15vw;
+    height: auto;
+    border-bottom: 8px solid rgb(49, 49, 49);
+    border-radius: 25%;
+   
+
+}
+
+.contenedor-sobremi .titulo-seccion {
+
+    display: inline-block;
+    margin: 2% 2% 2% 0;
+    line-height: 2;
+    font-weight: 800;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    color: var(--colorLetraBlanca);
+    
+}
+.contenedor-sobremi h4{
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.contenedor-sobremi b, .dicho, .aei {
+    
+     font-size: 1em;
+     font-weight: 400;
+    line-height: 25px;
+    color: var(--colorLetraBlanca); 
+    
+   
+}
+
+.contenedor-sobremi b a,
+.aei {
+    position: relative;
+    text-decoration: none;
+    color: var(--colorLinks); 
+    
+}
+.aei{
+    margin-left: 1em;
+}
+
+.contenedor-sobremi .img2 {
+    position: relative;
+    margin: 0 0 0 3%;
+    float: right;
+    width: 20vw;
+    height: auto;
+    display: none;
+    
+}
+
+
+/* responsive desing */
+@media screen and (max-width:800px) {
+
+    .nav ul{
+        opacity: 0;
+    }
+
+    nav {
+        transition: all .5s;
+        display: block;
+        background-color: rgba(0, 0, 0, .6);
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        top: 52px;
+        left: 0;
+        padding: 10px 0;
+        opacity: 0;
+    }
+    .responsive {
+        opacity: 1;
+        
+    }
+
+
+    .responsive ul {
+        display: block !important;
+        text-align: center;
+        opacity: 1;
+        
+
+    }
+
+    nav.responsive ul li {
+        margin: 5px 0;
+
+    }
+
+    #icono-nav {
+        display: block;
+    }
+    
+    .contenedor-sobremi .img1 {
+        
+        width: 25%;
+    }
+
+    .contenedor-sobremi .img2 {
+        display: block;
+        width: 25%;
+    }
+}
