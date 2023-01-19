@@ -328,12 +328,6 @@ img {
 @media screen and (max-width:960px) {
  
  
-  header nav ul {
-    
-    padding-top: 3%;
-  
-  }
- 
   /* nav */
   header {
     width: 100%;
@@ -342,13 +336,20 @@ img {
 
   header nav {
     gap: 1px;
-    width: 100%;
+    width: 100vw;
   }
 
   header nav ul {
     flex-direction: row;
     justify-content: space-evenly;
+  
+    padding-top: 3%;
     padding-left: 0;
+ 
+  }
+  .boton {
+    width: 120px;
+    height: 80px;
   }
 
   /* imagen  */
