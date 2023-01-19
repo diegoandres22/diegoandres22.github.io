@@ -12,22 +12,25 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Signika Negative', sans-serif;
-  overflow: hidden;
   user-select: none;
+
 }
 
 body {
   background: var(--colorFondo);
   min-height: 100vh;
+  overflow: hidden;
 }
 
+
+
+/* pepas de fondo */
 .contenedorPepa {
   top: 0;
   left: 0;
   position: absolute;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
 }
 
 .pepas {
@@ -67,6 +70,9 @@ body {
   }
 }
 
+
+
+/*  nav  */
 header {
   position: relative;
   z-index: 50;
@@ -80,8 +86,9 @@ header {
 header nav {
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 70px;
   margin: 15px;
+
 
 
 }
@@ -121,8 +128,14 @@ h1 {
 nav a {
   text-decoration: none;
   width: 320px;
+  overflow: hidden;
 
 }
+
+
+
+
+/* imagen de diego  */
 
 .contenedor-foto {
   position: absolute;
@@ -142,6 +155,9 @@ img {
   margin-right: 1px;
 }
 
+
+
+/* botones con video */
 .boton {
   position: relative;
   width: 140px;
@@ -154,7 +170,6 @@ img {
   border-radius: 25px;
   display: flex;
   text-decoration: none;
-  overflow: hidden;
   border: 5px solid #1f1f24;
   transition: all .4s;
 }
@@ -165,6 +180,7 @@ img {
   z-index: 7;
   transition: all .4s;
 
+
 }
 
 .boton:hover {
@@ -174,7 +190,7 @@ img {
 }
 
 .boton:hover span {
-  color: rgb(255, 255, 255);
+  color: #ffffff;
 
 }
 
@@ -217,7 +233,7 @@ img {
   z-index: 1;
   left: -60px;
   top: -37px;
-  
+
 }
 
 .contenedorVideoH {
@@ -230,7 +246,7 @@ img {
   opacity: 0;
   transition: all .4s;
   display: none;
-  
+
 }
 
 .boton:hover .contenedorVideoC {
@@ -259,52 +275,69 @@ img {
   top: -30px;
 }
 
-.contenedor_puzzle {
+
+/* puzzle  */
+.contenedor_puzzle{
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   display: flex;
-
-}
-
-.puzzle {
-  margin: auto;
-  width: 480px;
-  height: 480px;
-  border: 2px solid var(--azulFlama);
-  /* transform: scale(0); */
-}
-
-td img {
-  width: 166px;
-  height: 166px;
-
-}
-
-
-@media screen and (max-width:900px) {
-
-  * {
-    overflow: auto;
-  }
-
-  ::-webkit-scrollbar {
-    background-color: rgb(60, 60, 60);
-    width: 10px;
+  width: 100vw;
+  height: 100vh;
+  padding: 10px;
 
   }
 
-  ::-webkit-scrollbar-thumb {
-    background-color: #040252;
-    border-radius: 15px;
-    border: 2px solid rgb(60, 60, 60);
-  }
 
+
+  .puzzle{
+    margin: auto 28% auto auto  ;
+    height: auto;
+    max-height: 480px;
+    width: 95vw;
+    max-width: 480px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    border: #970c2a 3px solid;
+    border-radius: 10px;
+
+    }
+
+    .puzzle div{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    }
+    .puzzle img{
+      height: 100%;
+    width: 100%;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:960px) {
+ 
+ 
+  header nav ul {
+    
+    padding-top: 3%;
+  
+  }
+ 
   /* nav */
   header {
     width: 100%;
+    height: auto;
   }
 
   header nav {
@@ -323,22 +356,27 @@ td img {
     display: none;
   }
 
-  /* puzzle */
-  .contenedor_puzzle {
-    top: 25%;
-    overflow: hidden;
-  }
 
-  .puzzle {
-    overflow: hidden;
+/* puzzle  */
+.contenedor_puzzle{
+  position: relative;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  padding: 10px;
+
   }
+  .puzzle{
+    margin: 0 auto auto auto ;
+
+    }
+
+
   /* botones */
-
-  
   .contenedorVideoS {
     overflow: hidden;
   }
-  
+
   .contenedorVideoH {
     overflow: hidden;
   }
@@ -351,5 +389,30 @@ td img {
     height: 1%;
     width: 1%;
   }
+  .contenedorVideoH, .contenedorVideoC, .contenedorVideoS {
+    opacity: 1;
+    display: block;
+    opacity: .5;
+  }
+  .boton span {
+    color: #ffffff;
+  
+  }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
